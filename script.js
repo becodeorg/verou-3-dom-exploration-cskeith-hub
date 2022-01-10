@@ -1,3 +1,5 @@
+// show the DOM
+console.log(document) ;
 // console log title 
 console.log(document.title);
 
