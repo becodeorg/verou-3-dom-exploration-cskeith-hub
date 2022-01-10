@@ -24,6 +24,6 @@ random_bg_color();
 
 const show = document.body.children;
 
-for (var i = 0; i < document.body.children.length; i++) {
-    console.log(document.body.children[i].tagName);
+for (let i = 0; i < document.body.children.length; i++) {
+    console.log(document.body.children[i]);
 }
