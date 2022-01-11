@@ -33,6 +33,8 @@ function shuffleArray(names) {
     }
 }
 
+
+
 function lightOrDark(color) {
 
     // Variables for red, green, blue values
@@ -76,15 +78,15 @@ for (var i = 0; i < names.length; i++) {
     article.appendChild(section)
         .appendChild(paragraph)
     var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    const sArray = shuffleArray(names);
+
     const bgColor = lightOrDark(randomColor);
     if (bgColor === "black") {
         paragraph.style.color = "white";
-    } else
+    } else {
         paragraph.style.color = "black";
+    }
+    const sArray = shuffleArray(names);
 }
-
-
 
 console.log(article);
 
