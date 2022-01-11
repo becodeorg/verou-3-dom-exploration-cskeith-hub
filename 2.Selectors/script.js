@@ -3,7 +3,7 @@
 // Create a const that selects all important classes
 const important = document.querySelectorAll(".important");
 // Add a title to important
-important.title = "This is an important item";
+important.setAttribute = ("title", "This is an important item.")
 // Console log the result
 console.log(important);
 
@@ -29,13 +29,17 @@ for (let i = 0; i < img.length; i++) {
 const p = document.querySelectorAll('p');
 console.log(p);
 // for paragraph in i log p
-for (let i = 0; i < p.length; i++) {
+for(let i = 0; i < p.length; i++) {
     const currentParagraph = p[i];
-    console.log(p[i]);
-    // if current p haves a className 
+    console.log(currentParagraph);
     if (currentParagraph.className)
-        // console log currentParagraph with classname
         console.log(currentParagraph.className);
+        // else give the p nodes a random color exept .className
+    else
+        var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        currentParagraph.style.color = "#" + randomColor
 }
-//Give each of the paragraph a random text color (different for each one) UNLESS it has a class then leave it as it is.
+
+
+
 
