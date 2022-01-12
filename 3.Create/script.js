@@ -32,8 +32,8 @@ function shuffleArray(names) {
         names[j] = temp;
     }
 }
-
-
+// Call function
+shuffleArray(names);
 
 function lightOrDark(color) {
 
@@ -85,7 +85,6 @@ for (var i = 0; i < names.length; i++) {
     } else {
         paragraph.style.color = "black";
     }
-    const sArray = shuffleArray(names);
 }
 
 console.log(article);
