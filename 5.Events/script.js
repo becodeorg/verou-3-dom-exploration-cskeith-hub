@@ -18,15 +18,13 @@ function clickOnSquare(e){
     const log = document.createElement("li");
     logBox.appendChild(log);
     log.append( '[' + (getElapsedTime() + '] ') + (e.target.classList[1]));
-
 }
+
 const actionsquares = document.querySelectorAll('.actionsquare');
 for(let actionsquare of actionsquares) {
     actionsquare.addEventListener('click', clickOnSquare);
 
 }
-
-
 
 const body = document.querySelector("body");
 body.addEventListener('keydown', random_bg_color);
@@ -38,12 +36,23 @@ function random_bg_color(e) {
     var bgColor = "rgb(" + x + "," + y + "," + z + ")";
     document.body.style.background = bgColor;
     if(e.which === 32) {
-        console.log("Hello world");
         random_bg_color(body);
-
+        const logBoxBg = document.querySelector("ul");
+        const logBg = document.createElement("li");
+        logBoxBg.appendChild(logBg);
+        logBg.append( '[' + (getElapsedTime() + '] ' + bgColor));
+        console.log(e.which);
     }
+}
+
+
+body.addEventListener('keydown', clickOnSquare, random_bg_color, remover);
+function remover(e){
+    if(e.which === 76){
+        console.log(e.which);
     }
 
+}
 
 
 
